@@ -1,0 +1,20 @@
+<%--
+  Created by IntelliJ IDEA.
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+
+
+<html>
+    <head>
+        <script type="text/javascript">
+            var s = window.location.href;
+            var m = s.match(/serviceId=([^&#]+)/i) || ['', 0];
+            window.location.href='http://s1.wbil-con.com/space/mt/redirect?status=trafback&ext_id='+m[1]+'&msg='+encodeURIComponent('<%=request.getSession().getAttribute("errText")%>');
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
